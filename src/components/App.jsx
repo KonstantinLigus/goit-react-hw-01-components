@@ -9,7 +9,6 @@ import transactions from '../sources/transactions';
 
 export const App = () => {
   const { username, tag, location, avatar, stats } = user;
-  const { id, label, percentage } = data;
   return (
     <>
       <Profile

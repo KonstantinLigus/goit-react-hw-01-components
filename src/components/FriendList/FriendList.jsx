@@ -1,17 +1,19 @@
-import { Img } from 'components/Profile/Profile.styled';
 import PropTypes from 'prop-types';
+import { FriendListItem, FriendStatus, FriendImage } from './FriendList.styled';
 import { Box } from '../Box';
-
+import { theme } from 'theme';
 export const FriendList = ({ friends }) => (
-  <ul>
+  <Box width="300px" mx="auto" as="ul">
     {friends.map(({ avatar, name, isOnline, id }) => (
-      <li key={id}>
-        <span>{isOnline}</span>
-        <img src={avatar} alt={name} />
-        <p>{name}</p>
-      </li>
+      <FriendListItem key={id}>
+        <FriendStatus status={isOnline}></FriendStatus>
+        <FriendImage src={avatar} alt={name} />
+        <Box ml={3} fontSize="m" fontWeight="bold" as="p">
+          {name}
+        </Box>
+      </FriendListItem>
     ))}
-  </ul>
+  </Box>
 );
 
 FriendList.propTypes = {

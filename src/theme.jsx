@@ -8,6 +8,8 @@ export const theme = {
     secondary: '#05a',
     accent: '#609',
     muted: '#f6f6f6',
+    offline: '#ff0000',
+    online: '#008000',
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fonts: {
@@ -33,7 +35,7 @@ export const theme = {
   borders: {
     none: 'none',
     normal: '1px solid',
-    grey: '1px solid #9ead8ada',
+    easy: '1px solid #9ead8ada',
   },
   radii: {
     none: '0',
@@ -41,5 +43,8 @@ export const theme = {
     md: '8px',
     lg: '16px',
     round: '50%',
+  },
+  shadows: {
+    normal: '2px 2px 1px  #0000004c',
   },
 };
