@@ -7,7 +7,6 @@ import {
   Stats,
   StatsText,
 } from './Profile.styled';
-import { Box } from '../Box';
 
 export const Profile = ({
   username,

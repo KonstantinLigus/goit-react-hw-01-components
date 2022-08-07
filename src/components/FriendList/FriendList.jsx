@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { FriendListItem, FriendStatus, FriendImage } from './FriendList.styled';
 import { Box } from '../Box';
-import { theme } from 'theme';
 export const FriendList = ({ friends }) => (
   <Box width="300px" mx="auto" as="ul">
     {friends.map(({ avatar, name, isOnline, id }) => (
