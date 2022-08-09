@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { TableStyled } from './TransactionHistory.styled';
 export const TransactionHistory = ({ items }) => (
   <TableStyled>
@@ -21,3 +21,14 @@ export const TransactionHistory = ({ items }) => (
     </tbody>
   </TableStyled>
 );
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string,
+      type: PropTypes.string,
+      amount: PropTypes.string,
+      currency: PropTypes.string,
+    })
+  ),
+};
