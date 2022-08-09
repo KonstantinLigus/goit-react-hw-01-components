@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { StatisticsItem } from './Statistics.styled';
 import { Box } from '../Box';
-import { backgroundColorRender } from '../../functions/backgroundColorRender';
+import { backgroundColorRender } from '../../helpers/backgroundColorRender';
 
 export const Statistics = props => (
   <Box display="flex" flexDirection="column" alignItems="center">
@@ -20,7 +20,12 @@ export const Statistics = props => (
 );
 
 Statistics.propTypes = {
-  id: PropTypes.string,
-  label: PropTypes.string,
-  percentage: PropTypes.number,
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
 };

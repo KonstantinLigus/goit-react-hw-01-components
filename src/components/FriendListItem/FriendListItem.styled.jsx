@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const FriendListItem = styled.li`
+export const Item = styled.div`
   display: flex;
   padding: ${p => p.theme.space[3]}px;
   align-items: center;
@@ -25,4 +25,10 @@ export const FriendImage = styled.img`
   margin-left: ${p => p.theme.space[3]}px;
   border: ${p => p.theme.borders.easy};
   border-radius: ${p => p.theme.radii.md};
+`;
+
+export const Text = styled.p`
+  margin-left: ${p => p.theme.space[3]}px;
+  font-size: ${p => p.theme.fontSizes.m};
+  font-weight: ${p => p.theme.fontWeights.bold};
 `;
